@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+ /* reset */
+  * {
+     margin:0; 
+     padding:0;
+   }
+   
+body {
+  margin: 0;
+}
+
+header {
+	width: 1200px;
+	margin: 0 auto; /* 21.10.22 추가: 이렇게 해야 큰 화면에서 가운데 정렬됨 SH */
+	/* margin-right: 0;; */
+	height: 160px;
+	position: relative;
+	padding: 30px;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #BDBDBD;
+	text-decoration: none;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: white; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: 333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #333;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(129, 128, 128);
+  cursor: pointer;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 20px;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+/* 로그인 전 후 CSS 다름 시작 */
+#main_tnb1 {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	right: 70px;
+	margin: 10px;
+	overflow: hidden;
+	width: 180px;
+	height: 100px;
+}
+
+#main_tnb1>ul>li {
+	display: inline-block;
+	padding: 5px;
+}
+#main_tnb2 {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	right: 50px;
+	margin: 10px;
+	overflow: hidden;
+	width: 550px;
+	height: 100px;
+}
+
+#main_tnb2>ul>li {
+	display: inline-block;
+	padding: 5px;
+}
+
+/* 로그인 전: 로그인 | 최근본상품 */
+
+/* 로그인 후: OOO님 | 로그아웃 | 마이페이지 | 장바구니 | 최근본상품 */
+#main_tnb2 li::after {
+	padding-left: 10px;
+	content: "|";
+}
+
+#main_tnb2 li:last-child::after {
+	padding-left: 10px;
+	content: "";
+}
+/* 로그인 전 후 CSS 다름  끝*/
+/* 21-10-23 추가: 상단 네비바-검색창 SH*/
+#keyword_input_var{
+	width: 150px;
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 12px 20px;
+  line-height: 20px;
+  opacity: 0.85;
+  transition: width 0.4s ease-in-out;
+}
+#keyword_input_var:hover,#searchBtn:hover {
+	opacity: 1;
+}
+#keyword_input_var:focus {
+	 width: 100%;
+}
+/* 돋보기 버튼*/
+#searchBtn_var{
+      	padding: 6px;
+        margin: 4px;
+        text-align: center;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+        border-radius: 5px;
+        }
+#searchBtn_var:hover {
+        border: 2px solid #FEA500;
+        background-color: #FEA500;
+        }
